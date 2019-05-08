@@ -1,25 +1,11 @@
-Sanford.Multimedia.Midi
-=======================
-
-This is all source code of the C# MIDI toolkit from CodeProject by Leslie Sanford.
-
-Improvements:
-- 64-bit compatible
-- Windows 8 and 10 compatible
-- Mono framework compatible on Windows
-- Does not require additional assemblies
-- Faster midi file reading in Release build
-
-Also avaliable on Nuget.org
-
-    PM> Install-Package Sanford.Multimedia.Midi
-
-If you have any improvement or fix to this library, please don't hesitate to make a fork and open a pull request.
-
-MIT License
-
-Credits:
-
-http://www.codeproject.com/Articles/6228/C-MIDI-Toolkit
-
-https://code.google.com/p/vsticks/
+# 实验2：Windows Form实现MIDI音乐文件的播放APP
+## 功能概述
+能够成功编译C# MIDI Toolkit提供的演示程序，并能正常播放MIDI文件。
+## 项目特色
+改变窗体大小时，界面中控件的大小和位置会随之改变。进度条和钢琴j键的宽度将匹配窗口宽度，钢琴键将保持长宽比不变，按钮保持居中，并设定了窗口长宽最小值。对于键盘弹奏钢琴增加了移至相邻八度的功能，按下\['\]键将右移一个八度，按下\[;\]将左移一个八度，同时修复了在琴键按下时移至其他八度时按键无法释放的问题。
+## 代码总量
+Form1.cs共计310行
+## 工作时间
+大概四小时吧
+## 结论
+通过重写form类的OnResize方法，对resize事件作出响应，并对控件的大小位置进行修改，从而完成了实验目的。
